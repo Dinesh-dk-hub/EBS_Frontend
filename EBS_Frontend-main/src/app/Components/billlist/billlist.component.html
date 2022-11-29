@@ -1,0 +1,59 @@
+<br><br>
+    <div class="h1 text-center"><b>Customer Bills</b></div>
+<br><br>
+<!-- <a *ngIf="user.customerId==10"> -->
+<div class="container">
+<table  class="hoverTable"border = 1 >
+    <tr bgcolor="000FFF" style="padding:10px ;" >
+        <th style="color: white;">Bill ID</th>
+        <th style="color: white;">BillGenDate</th>
+        <th style="color: white;">Customer ID</th>
+        <th style="color: white;">Per Unit Cost</th>
+        <th style="color: white;">Total Units</th>
+        <th style="color: white;">Bill Amount</th>
+        <th style="color: white;">Bill Due Date</th>
+        <th style="color: white;">Delete</th>
+        <!-- <th>Invoice</th>  -->
+
+    </tr>
+
+    <tr *ngFor="let user of userData">
+        <!-- <a *ngIf="user.customerId==10"> -->
+        
+        <td>{{user.billId}}</td>
+
+        <td>{{user.billGenDate}}</td>
+
+        <td>{{user.customerId}}</td>
+
+        <td>{{user.perUnitCost}}</td>
+
+        <td>{{user.totalUnits}}</td>
+
+        <td>{{user.billAmount}}</td>
+
+        <td>{{user.billDueDate}}</td>
+
+       <!-- <td><button class ="btn btn-primary" type="submit" routerLink="/invoice">Invoice</button></td>  -->
+        <!-- </a> -->
+    <!-- </tr> -->
+    <td><a   (click)="deleteData(user.billId)">
+        <span class="material-icons" style="color: rgb(255, 0, 0);"> delete </span>
+      </a></td>
+    
+
+</table>
+<br><br>
+</div>
+    
+    <button class="btn btn-success " style="margin-left: 90%;" (click)="AddBill()" >Add Bill</button>
+
+    <!-- <button class="btn btn-warning " style="margin-left: 1%;" routerLink="/postadminlogincard">Back</button><br><br><br><br><br> -->
+
+    <!-- <button class="btn btn-warning" style="margin-left: 1%;" routerLink="/postadminlogincard">Back</button> -->
+<!-- </a> -->
+<!-- </div> -->
+
+<br><br>
+
+
